@@ -5,5 +5,6 @@ if __name__ == "__main__":
 
     while True:
         query = input("You: ")
-        response = agent.run(query)
-        print("AI:", response)
+
+        response = agent.invoke({"input": query})
+        print("AI:", response["output"])
